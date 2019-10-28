@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBDShopLib", "DBDShopLib\DBDShopLib.csproj", "{D52E6C2F-EA4C-44FF-AEA0-C3C38DEBC3EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBDShopApp", "DBDShopApp\DBDShopApp.csproj", "{9A8CBA01-EC9D-41BE-90D6-262DCC3C7C8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{4B0B69B6-31C3-40EC-BB12-A95D2833D136}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D52E6C2F-EA4C-44FF-AEA0-C3C38DEBC3EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D52E6C2F-EA4C-44FF-AEA0-C3C38DEBC3EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D52E6C2F-EA4C-44FF-AEA0-C3C38DEBC3EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D52E6C2F-EA4C-44FF-AEA0-C3C38DEBC3EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A8CBA01-EC9D-41BE-90D6-262DCC3C7C8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A8CBA01-EC9D-41BE-90D6-262DCC3C7C8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A8CBA01-EC9D-41BE-90D6-262DCC3C7C8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A8CBA01-EC9D-41BE-90D6-262DCC3C7C8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B0B69B6-31C3-40EC-BB12-A95D2833D136}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B0B69B6-31C3-40EC-BB12-A95D2833D136}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B0B69B6-31C3-40EC-BB12-A95D2833D136}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B0B69B6-31C3-40EC-BB12-A95D2833D136}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E82A5503-E7E7-44D1-8CD1-0F9338A1CCEF}
+	EndGlobalSection
+EndGlobal
