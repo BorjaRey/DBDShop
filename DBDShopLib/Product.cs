@@ -10,5 +10,6 @@ namespace DBDShopLib
     {
         public int Id = 0;
         public string Name = null;
+
     }
 }
