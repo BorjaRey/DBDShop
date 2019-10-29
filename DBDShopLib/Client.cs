@@ -35,6 +35,7 @@ namespace DBDShopLib
             cmd = new MySqlCommand(query, m_connection);
             cmd.ExecuteNonQuery();
 
+
         }
 
         public List<Product> GetProducts()
