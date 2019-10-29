@@ -34,6 +34,7 @@ namespace DBDShopLib
             query = "INSERT INTO Products VALUES(2,'Patata');";
             cmd = new MySqlCommand(query, m_connection);
             cmd.ExecuteNonQuery();
+
         }
 
         public List<Product> GetProducts()
