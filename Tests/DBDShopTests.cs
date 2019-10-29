@@ -31,8 +31,9 @@ namespace Tests
         public void MyOhterTest()
         {
             //Connect to the test database
-            //Client client = new Client("NLphb4HrH0", "NLphb4HrH0", "VM8GYV3qZ7");
-            
+            Client cliente = new Client(eSQ5HjQqMG, eSQ5HjQqMG, RRcl8SrkxR, remotemysql.com);
+            //Get all the existing products
+            List<Product> products = client.GetProducts();
             //Any testing you need to do
             //....
         }
