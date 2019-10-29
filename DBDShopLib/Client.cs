@@ -14,18 +14,18 @@ namespace DBDShopLib
 
         public Client(string databasename, string username, string password, string server= "remotemysql.com")
         {
-            m_connection = new MySqlConnection();
+             m_connection = new MySqlConnection();
             m_connection.ConnectionString =
-            "Server=" + server + ";" +
-            "database=" + databasename + ";" +
-            "UID=" + username + ";" +
-            "password=" + password + ";";
+            "Server=" + remotemysql.com + ";" +
+            "database=" + eSQ5HjQqMG  + ";" +
+            "UID=" + usereSQ5HjQqMG + ";" +
+            "password=" + RRcl8SrkxR + ";";
             m_connection.Open();
         }
 
         public void InsertTestData()
         {
-            string query = "CREATE TABLE IF NOT EXISTS Products (Id int,Name TEXT)";
+            string query = "CREATE TABLE IF NOT EXISTS Products (IDPRODUCTO int, DESCRIPCION TEXT, STOCK int)";
             MySqlCommand cmd = new MySqlCommand(query, m_connection);
             cmd.ExecuteNonQuery();
             query = "INSERT INTO Products VALUES(1,'Nocilla');";
