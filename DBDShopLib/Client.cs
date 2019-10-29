@@ -16,10 +16,10 @@ namespace DBDShopLib
         {
             m_connection = new MySqlConnection();
             m_connection.ConnectionString =
-            "Server=" + server + ";" +
-            "database=" + databasename + ";" +
-            "UID=" + username + ";" +
-            "password=" + password + ";";
+            "Server=" + remotemysql.com + ";" +
+            "database=" + eSQ5HjQqMG  + ";" +
+            "UID=" + eSQ5HjQqMG  + ";" +
+            "password=" + RRcl8SrkxR + ";";
             m_connection.Open();
         }
 
@@ -40,17 +40,17 @@ namespace DBDShopLib
         {
             List<Product> products = new List<Product>();
 
-            string query = "SELECT Id,Name FROM Products";
+            string query = "SELECT IDPRODUCTO,DESCRIPCION FROM PRODUCTO";
             MySqlCommand cmd = new MySqlCommand(query, m_connection);
             MySqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
                 
                 int id= int.Parse(reader.GetValue(0).ToString());
-                string name = reader.GetValue(1).ToString();
-                Product product = new Product();
-                product.Id = id;
-                product.Name = name;
+                string nombre = reader.GetValue(1).ToString();
+                Product product = new PRODUCTO();
+                product.IDPRODUCTO = id;
+                product.IDPRODUCTO = nombre;
                 products.Add(product);
             }
             reader.Close();
