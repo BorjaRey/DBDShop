@@ -25,13 +25,13 @@ namespace DBDShopLib
 
         public void InsertTestData()
         {
-            string query = "CREATE TABLE IF NOT EXISTS Products (Id int,Name TEXT)";
+            string query = "CREATE TABLE IF NOT EXISTS PRODUCTO (stock int, idProducto int, descripcion TEXT, idPedido int, nArt int)";
             MySqlCommand cmd = new MySqlCommand(query, m_connection);
             cmd.ExecuteNonQuery();
-            query = "INSERT INTO Products VALUES(1,'Nocilla');";
+            query = "INSERT INTO PRODUCTO VALUES(1, 1,'Nocilla', 24, 1);";
             cmd = new MySqlCommand(query, m_connection);
             cmd.ExecuteNonQuery();
-            query = "INSERT INTO Products VALUES(2,'Patata');";
+            query = "INSERT INTO PRODUCTO VALUES(2,2,'Patata',22,1);";
             cmd = new MySqlCommand(query, m_connection);
             cmd.ExecuteNonQuery();
         }
@@ -40,17 +40,23 @@ namespace DBDShopLib
         {
             List<Product> products = new List<Product>();
 
-            string query = "SELECT Id,Name FROM Products";
+            string query = "SELECT * FROM PRODUCTO";
             MySqlCommand cmd = new MySqlCommand(query, m_connection);
             MySqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
                 
-                int id= int.Parse(reader.GetValue(0).ToString());
-                string name = reader.GetValue(1).ToString();
+                int stock = int.Parse(reader.GetValue(0).ToString());
+                int idProducto = int.Parse(reader.GetValue(1).ToString());
+                string descripcion = reader.GetValue(2).ToString();
+                int idPedido = int.Parse(reader.GetValue(3).ToString());
+                int nArt = int.Parse(reader.GetValue(4).ToString());
                 Product product = new Product();
-                product.Id = id;
-                product.Name = name;
+                product.stock = stock;
+                product.idProducto = idProducto;
+                product.descripcion = descripcion;
+                product.idPedido = idPedido;
+                product.nArt = nArt;
                 products.Add(product);
             }
             reader.Close();
@@ -61,7 +67,7 @@ namespace DBDShopLib
         {
             foreach(Product product in products)
             {
-                string query = "DELETE FROM Productos WHERE IDPRODUCTO =" + product.Id + ";";
+                string query = "DELETE FROM PRODUCTO WHERE IDPRODUCTO =" + product.idProducto + ";";
                 MySqlCommand cmd = new MySqlCommand(query, m_connection);
                 cmd.ExecuteNonQuery();
             }

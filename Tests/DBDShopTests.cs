@@ -12,9 +12,10 @@ namespace Tests
         public void AddAndTestData()
         {
             //Connect to the test database
-            Client client= new Client("NLphb4HrH0", "NLphb4HrH0", "VM8GYV3qZ7");
+            Client client= new Client("eSQ5HjQqMG ", "eSQ5HjQqMG ", "RRcl8SrkxR");
             //Get all the existing products
             List<Product> products = client.GetProducts();
+            
             //Delete all the products
             client.DeleteProducts(products);
             //Check we deleted all the products
@@ -31,10 +32,14 @@ namespace Tests
         public void MyOhterTest()
         {
             //Connect to the test database
-            //Client client = new Client("NLphb4HrH0", "NLphb4HrH0", "VM8GYV3qZ7");
-            
-            //Any testing you need to do
-            //....
+            Client cliente = new Client("eSQ5HjQqMG ", "eSQ5HjQqMG ", "RRcl8SrkxR");
+
+            //Get all the existing products
+            List<Product> products = cliente.GetProducts();
+            cliente.InsertTestData();
+            Assert.IsTrue(products.Count == 2);
+            cliente.DeleteProducts(products);
+            Assert.IsTrue(products.Count == 0);
         }
     }
 }
